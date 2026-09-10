@@ -1,0 +1,8 @@
+{
+  "status": "failure",
+  "code": "intervention_required",
+  "step": "step_4",
+  "expected": "New sub-account",
+  "observed": "Session expired",
+  "outputs_persisted": false
+}

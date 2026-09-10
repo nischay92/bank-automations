@@ -1,0 +1,5 @@
+{"time": "2026-09-10T06:11:59.568922+00:00", "event": "run_started", "source": "deterministic_replay"}
+{"time": "2026-09-10T06:11:59.605784+00:00", "event": "action_executed", "step": "step_1", "action": "fill", "state": "Member search", "control": "Member ID"}
+{"time": "2026-09-10T06:11:59.617794+00:00", "event": "checkpoint_verified", "step": "step_1", "state": "Member search"}
+{"time": "2026-09-10T06:11:59.665333+00:00", "event": "action_executed", "step": "step_2", "action": "click", "state": "Member search", "control": "Search"}
+{"time": "2026-09-10T06:11:59.721934+00:00", "event": "control_transfer", "owner": "FINISHED"}

@@ -1,0 +1,17 @@
+{
+  "screen": "Unexpected dialog",
+  "controls": [
+    {
+      "ref": "c1",
+      "role": "textbox",
+      "name": "Member ID"
+    },
+    {
+      "ref": "c2",
+      "role": "button",
+      "name": "Search"
+    }
+  ],
+  "values": "omitted",
+  "page_text": "omitted"
+}

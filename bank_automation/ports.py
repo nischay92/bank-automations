@@ -1,0 +1,23 @@
+"""Surface seam: flow engines depend on observation/action contracts, not Playwright."""
+
+from typing import Protocol
+
+from .audit import Audit
+from .models import Inputs, Step, Target
+from .operator import Controller
+
+
+class Surface(Protocol):
+    audit: Audit
+    controller: Controller
+    refs: dict[str, Target]
+
+    async def state(self) -> str: ...
+    async def observe(self) -> dict: ...
+    async def screenshot(self) -> str: ...
+    async def act(self, step: Step, inputs: Inputs) -> None: ...
+    async def settle(
+        self, before: str, expect_change: bool, timeout_ms: int = 5000
+    ) -> str: ...
+    async def verify_field(self, step: Step, inputs: Inputs) -> bool: ...
+    async def verify(self, inputs: Inputs) -> dict | None: ...

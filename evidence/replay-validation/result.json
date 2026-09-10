@@ -1,0 +1,8 @@
+{
+  "status": "business_outcome",
+  "code": "validation_rejected",
+  "step": "step_6",
+  "expected": null,
+  "observed": "Validation rejected",
+  "outputs_persisted": false
+}

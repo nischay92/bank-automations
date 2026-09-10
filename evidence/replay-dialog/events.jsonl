@@ -1,0 +1,6 @@
+{"time": "2026-09-10T07:44:10.990337+00:00", "event": "run_started", "source": "deterministic_replay"}
+{"time": "2026-09-10T07:44:11.027649+00:00", "event": "action_executed", "step": "step_1", "action": "fill", "state": "Member search", "control": "Member ID"}
+{"time": "2026-09-10T07:44:11.037514+00:00", "event": "checkpoint_verified", "step": "step_1", "state": "Member search"}
+{"time": "2026-09-10T07:44:11.074647+00:00", "event": "unexpected_dialog", "code": "dismissed_unexpected_dialog"}
+{"time": "2026-09-10T07:44:11.076816+00:00", "event": "action_executed", "step": "step_2", "action": "click", "state": "Member search", "control": "Search"}
+{"time": "2026-09-10T07:44:11.124928+00:00", "event": "control_transfer", "owner": "FINISHED"}

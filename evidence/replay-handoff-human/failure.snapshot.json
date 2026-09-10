@@ -1,0 +1,22 @@
+{
+  "screen": "Session expired",
+  "controls": [
+    {
+      "ref": "c1",
+      "role": "textbox",
+      "name": "Operator name"
+    },
+    {
+      "ref": "c2",
+      "role": "textbox",
+      "name": "Training password"
+    },
+    {
+      "ref": "c3",
+      "role": "button",
+      "name": "Restore session"
+    }
+  ],
+  "values": "omitted",
+  "page_text": "omitted"
+}

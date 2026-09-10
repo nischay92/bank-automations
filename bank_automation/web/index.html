@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Northstar Member Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="shell">
+  <header>
+    <strong>NORTHSTAR</strong>
+    <span>Member services</span>
+    <small>Training environment · Synthetic data</small>
+  </header>
+  <div class="layout">
+    <aside>
+      <h3>Servicing</h3>
+      <p class="selected">Member workspace</p>
+      <p>Application version 1.0</p>
+      <nav aria-label="Demo scenarios">
+        <h3>Demo scenarios</h3>
+        <a href="/">Normal success</a>
+        <a href="/?scenario=slow">Slow recovery</a>
+        <a href="/?scenario=stuck">Loading timeout</a>
+        <a href="/?scenario=denied">Permission denied</a>
+        <a href="/?scenario=expired">Session handoff</a>
+        <a href="/?scenario=ambiguous">Ambiguous target</a>
+        <a href="/?scenario=disabled">Disabled target</a>
+        <a href="/?scenario=drift">UI label drift</a>
+        <a href="/?scenario=blocked">Blocked request</a>
+        <a href="/?scenario=dialog">Unexpected dialog</a>
+        <a href="/?scenario=review_mismatch">Review mismatch</a>
+      </nav>
+      <section class="input-scenarios" aria-label="Input-driven scenarios">
+        <h3>Input-driven</h3>
+        <p><code>99999</code> · member not found</p>
+        <p><code>reserved</code> · nickname rejected</p>
+      </section>
+    </aside>
+    <main><iframe title="Member workspace" src="workspace.html"></iframe></main>
+  </div>
+</body>
+</html>

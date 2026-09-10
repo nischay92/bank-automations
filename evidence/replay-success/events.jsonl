@@ -1,0 +1,14 @@
+{"time": "2026-09-10T06:11:55.751154+00:00", "event": "run_started", "source": "deterministic_replay"}
+{"time": "2026-09-10T06:11:55.789615+00:00", "event": "action_executed", "step": "step_1", "action": "fill", "state": "Member search", "control": "Member ID"}
+{"time": "2026-09-10T06:11:55.798972+00:00", "event": "checkpoint_verified", "step": "step_1", "state": "Member search"}
+{"time": "2026-09-10T06:11:55.851756+00:00", "event": "action_executed", "step": "step_2", "action": "click", "state": "Member search", "control": "Search"}
+{"time": "2026-09-10T06:11:55.858822+00:00", "event": "checkpoint_verified", "step": "step_2", "state": "Member details"}
+{"time": "2026-09-10T06:11:55.914752+00:00", "event": "action_executed", "step": "step_3", "action": "click", "state": "Member details", "control": "View savings"}
+{"time": "2026-09-10T06:11:55.919741+00:00", "event": "checkpoint_verified", "step": "step_3", "state": "Savings account"}
+{"time": "2026-09-10T06:11:55.966975+00:00", "event": "action_executed", "step": "step_4", "action": "click", "state": "Savings account", "control": "New sub-account"}
+{"time": "2026-09-10T06:11:55.974846+00:00", "event": "checkpoint_verified", "step": "step_4", "state": "New sub-account"}
+{"time": "2026-09-10T06:11:55.994263+00:00", "event": "action_executed", "step": "step_5", "action": "fill", "state": "New sub-account", "control": "Nickname"}
+{"time": "2026-09-10T06:11:56.002303+00:00", "event": "checkpoint_verified", "step": "step_5", "state": "New sub-account"}
+{"time": "2026-09-10T06:11:56.049497+00:00", "event": "action_executed", "step": "step_6", "action": "click", "state": "New sub-account", "control": "Review"}
+{"time": "2026-09-10T06:11:56.054715+00:00", "event": "checkpoint_verified", "step": "step_6", "state": "Review sub-account"}
+{"time": "2026-09-10T06:11:56.118665+00:00", "event": "control_transfer", "owner": "FINISHED"}

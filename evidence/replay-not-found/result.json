@@ -1,0 +1,8 @@
+{
+  "status": "business_outcome",
+  "code": "member_not_found",
+  "step": "step_2",
+  "expected": null,
+  "observed": "Member not found",
+  "outputs_persisted": false
+}

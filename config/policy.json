@@ -1,0 +1,13 @@
+{
+  "origin": "http://127.0.0.1:8765",
+  "routes": ["/", "/index.html", "/workspace.html", "/workspace.js", "/style.css"],
+  "actions": [
+    ["Member search", "fill", "Member ID"],
+    ["Member search", "click", "Search"],
+    ["Member details", "click", "View savings"],
+    ["Savings account", "click", "New sub-account"],
+    ["New sub-account", "select", "Account type"],
+    ["New sub-account", "fill", "Nickname"],
+    ["New sub-account", "click", "Review"]
+  ]
+}

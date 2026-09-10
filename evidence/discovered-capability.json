@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "name": "prepare_savings_subaccount",
+  "version": "1.0.0",
+  "provenance": "live_llm_discovery",
+  "model": "gpt-4.1",
+  "application": "northstar-training",
+  "ui_version": "1.0",
+  "effect": "prepare_only",
+  "input_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "member_id": {
+        "pattern": "^\\d{5}$",
+        "title": "Member Id",
+        "type": "string"
+      },
+      "nickname": {
+        "maxLength": 30,
+        "minLength": 1,
+        "pattern": "^\\S(?:.*\\S)?$",
+        "title": "Nickname",
+        "type": "string"
+      }
+    },
+    "required": [
+      "member_id",
+      "nickname"
+    ],
+    "title": "Inputs",
+    "type": "object"
+  },
+  "outputs": {
+    "account_type": {
+      "type": "string",
+      "source": "review.account_type",
+      "sensitive": false
+    },
+    "nickname": {
+      "type": "string",
+      "source": "review.nickname",
+      "sensitive": true
+    },
+    "review_verified": {
+      "type": "boolean",
+      "source": "checkpoint",
+      "sensitive": false
+    }
+  },
+  "outcome_rules": "northstar-v1",
+  "success": "review_matches_inputs",
+  "steps": [
+    {
+      "id": "step_1",
+      "action": "fill",
+      "target": {
+        "frame": "Member workspace",
+        "strategy": "label",
+        "name": "Member ID",
+        "role": "textbox"
+      },
+      "input_ref": "member_id",
+      "literal": null,
+      "precondition": "Member search",
+      "postcondition": "Member search",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_2",
+      "action": "click",
+      "target": {
+        "frame": "Member workspace",
+        "strategy": "role",
+        "name": "Search",
+        "role": "button"
+      },
+      "input_ref": null,
+      "literal": null,
+      "precondition": "Member search",
+      "postcondition": "Member details",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_3",
+      "action": "click",
+      "target": {
+        "frame": "Member workspace",
+        "strategy": "role",
+        "name": "View savings",
+        "role": "button"
+      },
+      "input_ref": null,
+      "literal": null,
+      "precondition": "Member details",
+      "postcondition": "Savings account",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_4",
+      "action": "click",
+      "target": {
+        "frame": "Member workspace",
+        "strategy": "role",
+        "name": "New sub-account",
+        "role": "button"
+      },
+      "input_ref": null,
+      "literal": null,
+      "precondition": "Savings account",
+      "postcondition": "New sub-account",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_5",
+      "action": "fill",
+      "target": {
+        "frame": "Member workspace",
+        "strategy": "label",
+        "name": "Nickname",
+        "role": "textbox"
+      },
+      "input_ref": "nickname",
+      "literal": null,
+      "precondition": "New sub-account",
+      "postcondition": "New sub-account",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_6",
+      "action": "click",
+      "target": {
+        "frame": "Member workspace",
+        "strategy": "role",
+        "name": "Review",
+        "role": "button"
+      },
+      "input_ref": null,
+      "literal": null,
+      "precondition": "New sub-account",
+      "postcondition": "Review sub-account",
+      "timeout_ms": 5000
+    }
+  ]
+}

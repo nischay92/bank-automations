@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "code": "discovery_complete",
+  "step": null,
+  "expected": null,
+  "observed": null,
+  "outputs_persisted": false
+}

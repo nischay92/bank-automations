@@ -1,0 +1,256 @@
+{
+  "$defs": {
+    "OutputField": {
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "string",
+            "boolean"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "review.account_type",
+            "review.nickname",
+            "checkpoint"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "sensitive": {
+          "default": false,
+          "title": "Sensitive",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "source"
+      ],
+      "title": "OutputField",
+      "type": "object"
+    },
+    "Step": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9_]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "action": {
+          "enum": [
+            "click",
+            "fill",
+            "select"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "target": {
+          "$ref": "#/$defs/Target"
+        },
+        "input_ref": {
+          "anyOf": [
+            {
+              "enum": [
+                "member_id",
+                "nickname"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Ref"
+        },
+        "literal": {
+          "anyOf": [
+            {
+              "const": "savings",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Literal"
+        },
+        "precondition": {
+          "title": "Precondition",
+          "type": "string"
+        },
+        "postcondition": {
+          "title": "Postcondition",
+          "type": "string"
+        },
+        "timeout_ms": {
+          "default": 5000,
+          "maximum": 10000,
+          "minimum": 100,
+          "title": "Timeout Ms",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "action",
+        "target",
+        "precondition",
+        "postcondition"
+      ],
+      "title": "Step",
+      "type": "object"
+    },
+    "Target": {
+      "additionalProperties": false,
+      "properties": {
+        "frame": {
+          "const": "Member workspace",
+          "default": "Member workspace",
+          "title": "Frame",
+          "type": "string"
+        },
+        "strategy": {
+          "enum": [
+            "label",
+            "role"
+          ],
+          "title": "Strategy",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "role": {
+          "anyOf": [
+            {
+              "enum": [
+                "button",
+                "combobox",
+                "textbox"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Role"
+        }
+      },
+      "required": [
+        "strategy",
+        "name"
+      ],
+      "title": "Target",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "name": {
+      "const": "prepare_savings_subaccount",
+      "default": "prepare_savings_subaccount",
+      "title": "Name",
+      "type": "string"
+    },
+    "version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Version",
+      "type": "string"
+    },
+    "provenance": {
+      "enum": [
+        "authored_example",
+        "live_llm_discovery"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    },
+    "model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model"
+    },
+    "application": {
+      "const": "northstar-training",
+      "default": "northstar-training",
+      "title": "Application",
+      "type": "string"
+    },
+    "ui_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Ui Version",
+      "type": "string"
+    },
+    "effect": {
+      "const": "prepare_only",
+      "default": "prepare_only",
+      "title": "Effect",
+      "type": "string"
+    },
+    "input_schema": {
+      "additionalProperties": true,
+      "title": "Input Schema",
+      "type": "object"
+    },
+    "outputs": {
+      "additionalProperties": {
+        "$ref": "#/$defs/OutputField"
+      },
+      "title": "Outputs",
+      "type": "object"
+    },
+    "outcome_rules": {
+      "const": "northstar-v1",
+      "default": "northstar-v1",
+      "title": "Outcome Rules",
+      "type": "string"
+    },
+    "success": {
+      "const": "review_matches_inputs",
+      "default": "review_matches_inputs",
+      "title": "Success",
+      "type": "string"
+    },
+    "steps": {
+      "items": {
+        "$ref": "#/$defs/Step"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Steps",
+      "type": "array"
+    }
+  },
+  "required": [
+    "provenance",
+    "steps"
+  ],
+  "title": "Capability",
+  "type": "object"
+}

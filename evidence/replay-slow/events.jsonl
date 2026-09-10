@@ -1,0 +1,15 @@
+{"time": "2026-09-10T06:11:57.127939+00:00", "event": "run_started", "source": "deterministic_replay"}
+{"time": "2026-09-10T06:11:57.163428+00:00", "event": "action_executed", "step": "step_1", "action": "fill", "state": "Member search", "control": "Member ID"}
+{"time": "2026-09-10T06:11:57.173867+00:00", "event": "checkpoint_verified", "step": "step_1", "state": "Member search"}
+{"time": "2026-09-10T06:11:57.237621+00:00", "event": "action_executed", "step": "step_2", "action": "click", "state": "Member search", "control": "Search"}
+{"time": "2026-09-10T06:11:57.240975+00:00", "event": "recovery_wait", "state": "Loading", "code": "bounded_load_wait"}
+{"time": "2026-09-10T06:11:58.880369+00:00", "event": "checkpoint_verified", "step": "step_2", "state": "Member details"}
+{"time": "2026-09-10T06:11:58.919861+00:00", "event": "action_executed", "step": "step_3", "action": "click", "state": "Member details", "control": "View savings"}
+{"time": "2026-09-10T06:11:58.930992+00:00", "event": "checkpoint_verified", "step": "step_3", "state": "Savings account"}
+{"time": "2026-09-10T06:11:58.967578+00:00", "event": "action_executed", "step": "step_4", "action": "click", "state": "Savings account", "control": "New sub-account"}
+{"time": "2026-09-10T06:11:58.975069+00:00", "event": "checkpoint_verified", "step": "step_4", "state": "New sub-account"}
+{"time": "2026-09-10T06:11:58.997461+00:00", "event": "action_executed", "step": "step_5", "action": "fill", "state": "New sub-account", "control": "Nickname"}
+{"time": "2026-09-10T06:11:59.008409+00:00", "event": "checkpoint_verified", "step": "step_5", "state": "New sub-account"}
+{"time": "2026-09-10T06:11:59.052685+00:00", "event": "action_executed", "step": "step_6", "action": "click", "state": "New sub-account", "control": "Review"}
+{"time": "2026-09-10T06:11:59.059787+00:00", "event": "checkpoint_verified", "step": "step_6", "state": "Review sub-account"}
+{"time": "2026-09-10T06:11:59.118030+00:00", "event": "control_transfer", "owner": "FINISHED"}

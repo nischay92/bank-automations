@@ -1,0 +1,8 @@
+{
+  "status": "failure",
+  "code": "permission_denied",
+  "step": "step_2",
+  "expected": "Member details",
+  "observed": "Permission denied",
+  "outputs_persisted": false
+}

@@ -1,0 +1,22 @@
+{"time": "2026-09-10T06:20:29.829134+00:00", "event": "action_executed", "step": "step_1", "action": "fill", "state": "Member search", "control": "Member ID"}
+{"time": "2026-09-10T06:20:29.840660+00:00", "event": "checkpoint_verified", "step": "step_1", "state": "Member search"}
+{"time": "2026-09-10T06:20:29.899947+00:00", "event": "action_executed", "step": "step_2", "action": "click", "state": "Member search", "control": "Search"}
+{"time": "2026-09-10T06:20:29.906942+00:00", "event": "checkpoint_verified", "step": "step_2", "state": "Member details"}
+{"time": "2026-09-10T06:20:29.962189+00:00", "event": "action_executed", "step": "step_3", "action": "click", "state": "Member details", "control": "View savings"}
+{"time": "2026-09-10T06:20:29.968498+00:00", "event": "checkpoint_verified", "step": "step_3", "state": "Savings account"}
+{"time": "2026-09-10T06:20:30.010896+00:00", "event": "action_executed", "step": "step_4", "action": "click", "state": "Savings account", "control": "New sub-account"}
+{"time": "2026-09-10T06:20:30.054664+00:00", "event": "control_transfer", "owner": "PAUSED"}
+{"time": "2026-09-10T06:20:30.054707+00:00", "event": "intervention_requested", "step": "step_4", "state": "Session expired", "code": "checkpoint_unmet"}
+{"time": "2026-09-10T06:20:30.074920+00:00", "event": "control_transfer", "owner": "HUMAN"}
+{"time": "2026-09-10T06:20:30.107579+00:00", "event": "human_action", "action": "change", "control": "Operator name"}
+{"time": "2026-09-10T06:20:30.142896+00:00", "event": "human_action", "action": "change", "control": "Training password"}
+{"time": "2026-09-10T06:20:30.143674+00:00", "event": "human_action", "action": "click", "control": "Restore session"}
+{"time": "2026-09-10T06:20:30.144804+00:00", "event": "control_transfer", "owner": "RESUME_CHECK"}
+{"time": "2026-09-10T06:20:30.148559+00:00", "event": "control_transfer", "owner": "AUTOMATION"}
+{"time": "2026-09-10T06:20:30.151140+00:00", "event": "checkpoint_verified", "step": "step_4", "state": "New sub-account"}
+{"time": "2026-09-10T06:20:30.167922+00:00", "event": "action_executed", "step": "step_5", "action": "fill", "state": "New sub-account", "control": "Nickname"}
+{"time": "2026-09-10T06:20:30.176319+00:00", "event": "checkpoint_verified", "step": "step_5", "state": "New sub-account"}
+{"time": "2026-09-10T06:20:30.212464+00:00", "event": "action_executed", "step": "step_6", "action": "click", "state": "New sub-account", "control": "Review"}
+{"time": "2026-09-10T06:20:30.218452+00:00", "event": "checkpoint_verified", "step": "step_6", "state": "Review sub-account"}
+{"time": "2026-09-10T06:20:30.237892+00:00", "event": "verification_note", "source": "simulated_operator_same_session"}
+{"time": "2026-09-10T06:20:30.275002+00:00", "event": "control_transfer", "owner": "FINISHED"}

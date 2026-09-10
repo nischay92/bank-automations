@@ -1,0 +1,23 @@
+{"time": "2026-09-10T06:53:30.181660+00:00", "event": "run_started", "source": "discovery"}
+{"time": "2026-09-10T06:53:30.702356+00:00", "event": "discovery_started", "model": "gpt-4.1", "source": "live_openai"}
+{"time": "2026-09-10T06:53:32.399794+00:00", "event": "model_decision", "model": "gpt-4.1", "response_id": "resp_07ee511fa7cc3d39016aa253eb8b5c87d0a99423c833f95ab6", "action": "fill", "reason_code": "enter_input"}
+{"time": "2026-09-10T06:53:32.427613+00:00", "event": "action_executed", "step": "step_1", "action": "fill", "state": "Member search", "control": "Member ID"}
+{"time": "2026-09-10T06:53:32.435070+00:00", "event": "transition_recorded", "step": "step_1", "state": "Member search"}
+{"time": "2026-09-10T06:53:34.059093+00:00", "event": "model_decision", "model": "gpt-4.1", "response_id": "resp_046b3c28ca5e4173016aa253eca2f087d0af0973b77e990dd5", "action": "click", "reason_code": "navigate"}
+{"time": "2026-09-10T06:53:34.174744+00:00", "event": "action_executed", "step": "step_2", "action": "click", "state": "Member search", "control": "Search"}
+{"time": "2026-09-10T06:53:34.178097+00:00", "event": "transition_recorded", "step": "step_2", "state": "Member details"}
+{"time": "2026-09-10T06:53:35.533838+00:00", "event": "model_decision", "model": "gpt-4.1", "response_id": "resp_03b9371c8e78a4c4016aa253ee5ab087d0b4b3091082961c06", "action": "click", "reason_code": "navigate"}
+{"time": "2026-09-10T06:53:35.587961+00:00", "event": "action_executed", "step": "step_3", "action": "click", "state": "Member details", "control": "View savings"}
+{"time": "2026-09-10T06:53:35.590397+00:00", "event": "transition_recorded", "step": "step_3", "state": "Savings account"}
+{"time": "2026-09-10T06:53:36.722505+00:00", "event": "model_decision", "model": "gpt-4.1", "response_id": "resp_0e26bffb586b3aad016aa253efc6cc87d0a6b76ffc3d5f0f92", "action": "click", "reason_code": "navigate"}
+{"time": "2026-09-10T06:53:36.770753+00:00", "event": "action_executed", "step": "step_4", "action": "click", "state": "Savings account", "control": "New sub-account"}
+{"time": "2026-09-10T06:53:36.773413+00:00", "event": "transition_recorded", "step": "step_4", "state": "New sub-account"}
+{"time": "2026-09-10T06:53:38.332584+00:00", "event": "model_decision", "model": "gpt-4.1", "response_id": "resp_0547597ba8cc5e2c016aa253f1052c87d092bc6e76c1811b3e", "action": "fill", "reason_code": "enter_input"}
+{"time": "2026-09-10T06:53:38.357213+00:00", "event": "action_executed", "step": "step_5", "action": "fill", "state": "New sub-account", "control": "Nickname"}
+{"time": "2026-09-10T06:53:38.360028+00:00", "event": "transition_recorded", "step": "step_5", "state": "New sub-account"}
+{"time": "2026-09-10T06:53:40.183453+00:00", "event": "model_decision", "model": "gpt-4.1", "response_id": "resp_0d37bce103659744016aa253f2950c87d08a6349752219e052", "action": "click", "reason_code": "verify_goal"}
+{"time": "2026-09-10T06:53:40.220210+00:00", "event": "action_executed", "step": "step_6", "action": "click", "state": "New sub-account", "control": "Review"}
+{"time": "2026-09-10T06:53:40.222272+00:00", "event": "transition_recorded", "step": "step_6", "state": "Review sub-account"}
+{"time": "2026-09-10T06:53:41.429927+00:00", "event": "model_decision", "model": "gpt-4.1", "response_id": "resp_0c33ec13f44ca1d6016aa253f469d087d0b3ccdfaed215fd14", "action": "finish", "reason_code": "verify_goal"}
+{"time": "2026-09-10T06:53:41.454362+00:00", "event": "artifact_recorded", "count": 6, "source": "live_llm_discovery"}
+{"time": "2026-09-10T06:53:41.645050+00:00", "event": "control_transfer", "owner": "FINISHED"}
