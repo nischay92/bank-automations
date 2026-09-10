@@ -180,7 +180,3 @@ Browser tests start their own local server. They cover different replay paramete
 - `audit.py`: allowlisted metadata logging and sanitized structural failure snapshots.
 - `examples/`: authored reusable capability and generated JSON Schema.
 - `REPORT.md`: design decisions, scope, and limitations.
-
-## Before submission
-
-Inspect the committed discovery, replay, failure, and human-handoff evidence; run tests on your machine; push the source and evidence to a public GitHub repository. Never commit `.env`, API keys, raw sensitive screenshots, or `runs/`. Send the repository URL (on its own line) from your application email address to the assignment address in the brief. This project does not send that email or publish a repository automatically.
